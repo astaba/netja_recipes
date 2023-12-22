@@ -1,11 +1,7 @@
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
+import * as card from "@/components/ui/card";
+import * as avatar from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export interface Recipe {
   id: string;
@@ -31,21 +27,32 @@ export default async function Home() {
     <main>
       <div className="grid grid-cols-3 gap-8">
         {recipes.map((recipe) => (
-          <Card key={recipe.id} className="flex flex-col justify-between">
-            <CardHeader>
+          <card.Index key={recipe.id} className="flex flex-col justify-between">
+            <card.Header className="flex-row items-center gap-4">
+              <avatar.Index>
+                <avatar.Image
+                  src={`img/${recipe.image}`}
+                  alt={`recipe of ${recipe.title}`}
+                />
+                <avatar.Fallback>
+                  {recipe.title.slice(0, 2)}
+                </avatar.Fallback>
+              </avatar.Index>
               <div>
-                <CardTitle>{recipe.title}</CardTitle>
-                <CardDescription>{recipe.time} mins to cook.</CardDescription>
+                <card.Title>{recipe.title}</card.Title>
+                <card.Description>{recipe.time} mins to cook.</card.Description>
               </div>
-            </CardHeader>
-            <CardContent>
+            </card.Header>
+            <card.Content>
               <p>{recipe.description}</p>
-            </CardContent>
-            <CardFooter className="flex justify-between">
-              <button>View Recipe</button>
-              {recipe.vegan && <p className="mt-0">Vegan!</p>}
-            </CardFooter>
-          </Card>
+            </card.Content>
+            <card.Footer className="flex justify-between">
+              <Button size="sm">
+                View Recipe
+              </Button>
+              {recipe.vegan && <Badge variant="secondary">Vegan!</Badge>}
+            </card.Footer>
+          </card.Index>
         ))}
       </div>
     </main>

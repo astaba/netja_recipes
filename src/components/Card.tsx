@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ recipe }) => {
         <p>{recipe.description}</p>
       </card.Content>
       <card.Footer className="flex justify-between">
-        <Button size="sm">View Recipe</Button>
+        <Button type="button" size="sm">View Recipe</Button>
         {recipe.vegan && <Badge variant="secondary">Vegan!</Badge>}
       </card.Footer>
     </card.Index>

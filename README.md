@@ -39,7 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### 😩 json-server dev dependency
 
-At start up data seem the pop up out of no where in spite in spite of:
+At start up data seem the pop up out of no where in spite of:
 
 - 😬 NO globally installed json-server
 - 😤 NO spinning json-server, 4000 port not running
@@ -47,4 +47,4 @@ At start up data seem the pop up out of no where in spite in spite of:
 
 Making it impossible to update data.
 
-Where is the **cache ???** (***No pun intended***)
+**Where is the cache ???** (_No pun intended_)

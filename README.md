@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## DX(Development experience) Notes
+
+### 😩 json-server dev dependency
+
+At start up data seem the pop up out of no where in spite in spite of:
+
+- 😬 NO globally installed json-server
+- 😤 NO spinning json-server, 4000 port not running
+- 🤯 Even deleting all the db.json file content
+
+Making it impossible to update data.
+
+Where is the **cache ???** (***No pun intended***)
